@@ -5,10 +5,29 @@
     <title>Pomodoro</title>
   </head>
   <body>
+    <div id = "countdown"></div>
     <input id="create-task" type="text" placeholder="Create Task">
     <input id="task-time" type="number">
     <input id="rest-time" type="number">
   </body>
-  <script src = "lib/psuedo.js"></script>
+  <script>function countDown(taskSeconds, taskMinutes, elem) {
+  	var element = document.getElementById(elem);
+    var timer;
+    if(taskSeconds < 10){
+  	element.innerHTML = `<center>Minutes: <br>${taskMinutes}<br> <br>Seconds:<br>${taskSeconds}<br>`;
+  }
+  	if(taskSeconds < 1 && taskMinutes < 1) {
+      return clearTimeout(timer);
+  	}
+
+    if(taskSeconds < 1 && taskMinutes > 0){
+      taskSeconds = 60;
+      taskMinutes--;
+    }
+
+  	taskSeconds--;
+  	timer = setTimeout('countDown('+taskSeconds+', '+taskMinutes+',"'+elem+'")',1000);
+  }</script>
+  <script>countDown(3, 0, 'countdown');</script>
   <script src = "lib/jquery.js"></script>
 </html>
