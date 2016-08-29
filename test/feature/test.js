@@ -1,11 +1,4 @@
 const assert = require('assert');
-var $ = require('../../lib/jquery');
-const assert = require('chai').assert
-before: function() {
-    var chai = require('chai');
-    global.expect = chai.expect;
-    chai.Should();
-}
 
 describe('Welcome page', function(){
   it('should have a title', function(){
@@ -36,20 +29,22 @@ describe('Task time input field', function(){
     it('should take a number', function(){
       var restTimeInput = browser.element('#rest-time');
       restTimeInput.setValue(25);
-      assert.isOk(restTimeInput.getValue(), 25);
+      assert.equal(restTimeInput.getValue(), 25);
     });
 });
 
-describe('Start button', function(){
-  it('should start timer when clicked', function(){
-    var startButton = browser.element('#start-button');
-    var taskTimeInput = browser.element('#task-time');
-    taskTimeInput.setValue(25);
-    browser.click(startButton);
-
-
+  describe('Start button', function(){
+  this.rightNow = Date.now();
+  this.dateNow = Date.now;
+  Date.now = () => this.rightNow;
+    it('should start timer when clicked', function(){
+      var startButton = browser.element('#start-button');
+      var taskTimeInput = browser.element('#task-time');
+      var countDown = browser.element('#countDown');
+      taskTimeInput.setValue(25);
+      assert.notEqual(countDown, 25);
+    });
   });
-});
 //Phase 1
 
 //user story 1
