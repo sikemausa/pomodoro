@@ -1,4 +1,4 @@
-require('./lib/scripts/index');
+require('../../lib/scripts/index');
 const assert = require('chai').assert;
 const $ = require('jquery');
 
