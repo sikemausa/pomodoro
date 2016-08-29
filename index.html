@@ -2,16 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
     <title>Pomodoro</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:500" rel="stylesheet">
   </head>
   <body>
-    <section id="timer"></section>
-    <input id="create-task" type="text" placeholder="Create Task">
-    <input id="task-time" type="number" min="1" max="60" value="25">
-    <input id="rest-time" type="number" min="1" max="60" value="5">
-    <button type="button" id="start-button">Start</button>
-    <button type="button" id="stop-button">Stop</button>
-    <button type="button" id="pause-button">Pause</button>
+    <header class="border-top"></header>
+    <section class="content">
+      <input id="create-task" type="text" placeholder="Create Task">
+      <h1 class="title">Begin Your Pomodoro</h1>
+      <section id="timer"></section>
+      <button type="button" id="start-button">START</button>
+      <section class="time-inputs-text">
+        <p>Task Time:</p>
+        <p>Break Time:</p>
+      </section>
+      <section class="time-inputs">
+        <article>
+          <input id="task-time" type="number" min="1" max="60" value="25">
+          <p>mins.</p>
+        </article>
+        <article>
+          <input id="rest-time" type="number" min="1" max="60" value="5">
+          <p>mins.</p>
+        </article>
+      </section>
+      <section class="countdown-buttons">
+        <button type="button" id="pause-button">Pause</button>
+        <button type="button" id="stop-button" >Stop</button>
+      </section>
+    </section>
+    <footer class="border-bottom"></footer>
   </body>
   <script src="main.bundle.js"></script>
 </html>
