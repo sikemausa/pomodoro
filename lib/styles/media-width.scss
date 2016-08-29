@@ -1,0 +1,54 @@
+@media (min-width: 500px) {
+  #create-task {
+    font-size: 2em;
+  }
+
+  .title {
+    font-size: 4em;
+  }
+
+  #timer {
+    font-size: 7em;
+    padding: 10vh 0 10vh 0;
+  }
+
+  #start-button{
+    font-size: 2em;
+  }
+
+  .time-inputs-text {
+    font-size: 1.5em;
+  }
+
+  .time-inputs article {
+    font-size: 1.5em;
+  }
+
+  .countdown-buttons {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 700px) {
+  #create-task {
+    font-size: 2.5em;
+  }
+
+  .title {
+    font-size: 4em;
+    padding: 10vh 0 10vh 0;
+  }
+
+  #timer {
+    font-size: 10em;
+    padding: 10vh 0 10vh 0;
+  }
+
+  .time-inputs-text {
+    font-size: 2em;
+  }
+
+  .time-inputs article {
+    font-size: 2em;
+  }
+}

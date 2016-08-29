@@ -1,0 +1,41 @@
+@media (min-height: 650px) {
+  .title {
+    font-size: 4em;
+    padding: 13vh 0 13vh 0;
+  }
+
+  #timer {
+    font-size: 7em;
+  }
+
+  #start-button {
+    height: 2em;
+  }
+
+  #pause-button {
+    height: 2em;
+  }
+
+  #stop-button {
+    height: 2em;
+  }
+}
+
+@media (min-height: 900px) {
+  .title {
+    font-size: 5em;
+  }
+
+  #timer {
+    font-size: 10em;
+  }
+
+  #start-button {
+    margin: 0 0 5vh 0;
+  }
+
+  .countdown-buttons {
+    font-size: 2em;
+    margin-top: 2em;
+  }
+}
