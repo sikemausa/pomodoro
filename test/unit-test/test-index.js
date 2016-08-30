@@ -27,10 +27,3 @@ describe('timer', function(){
     assert.equal(timer.currentState, "unstarted");
   });
 });
-
-// describe('StartButton', function() {
-//   it('should start the countdown', function() {
-//     var period = 25;
-//     tick();
-// //   });
-// });
