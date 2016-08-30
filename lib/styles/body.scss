@@ -1,4 +1,6 @@
 $primary-font-family: 'Lato', sans-serif;
+$primary-color: #EB3B3F;
+$secondary-color: #11B997;
 
 body {
   display: flex;
@@ -13,13 +15,13 @@ body {
 }
 
 .border-top {
-  background-color: #EB3B3F;
+  background-color: $primary-color;
   height: 3em;
   width: 100vw;
 }
 
 .border-bottom {
-  background-color: #EB3B3F;
+  background-color: $primary-color;
   height: 3em;
   width: 100vw;
 }
@@ -36,8 +38,8 @@ body {
 
 .title {
   align-self: center;
-  border-top: 2px solid #EB3B3F;
-  color: #11B997;
+  border-top: 2px solid $primary-color;
+  color: $secondary-color;
   display: block;
   font-family: $primary-font-family;
   font-size: 3em;
@@ -46,22 +48,51 @@ body {
   text-align: center;
 }
 
+#time-remaining {
+  align-self: center;
+  align-content: center;
+  border-top: 2px solid $primary-color;
+  display: none;
+  justify-content: center;
+  width: 90%;
+}
+
+#task-time-remaining {
+  align-content: center;
+  display: flex;
+  font-family: $primary-font-family;
+  font-size: 1.4em;
+  padding: 1.2em 0 0 0;
+  justify-content: center;
+  text-align: center;
+}
+
+#break-time-remaining {
+  align-content: center;
+  display: none;
+  font-family: $primary-font-family;
+  font-size: 1.4em;
+  padding: 1.2em 0 0 0;
+  justify-content: center;
+  text-align: center;
+}
+
 #timer {
   align-self: center;
-  border-top: 2px solid #EB3B3F;
-  color: #11B997;
+  color: $secondary-color;
   display: none;
   font-family: $primary-font-family;
   font-size: 5em;
-  padding: 1em 0 1em 0;
-  width: 90%;
+  padding: .7em 0 .7em 0;
+  width: 70%;
   text-align: center;
 }
 
 #start-button {
   align-self: center;
-  background-color: lighten(#11B997, 20%);
-  border: none;
+  background-color: lighten( $secondary-color, 20% );
+  border: .12em solid;
+  border-color: $secondary-color darken( $secondary-color, 20% );
   cursor: pointer;
   display: block;
   font-family: $primary-font-family;
@@ -90,7 +121,6 @@ body {
 }
 
 .time-inputs article {
-  // align-self: center;
   display: flex;
   justify-content: center;
   width: 50%;
@@ -104,14 +134,14 @@ body {
 }
 
 #task-time {
-  border: 2px solid #11B997;
+  border: 2px solid $secondary-color;
   font-size: 1.2em;
   text-align: center;
   width: 2em;
 }
 
 #rest-time {
- border: 2px solid #EB3B3F;
+ border: 2px solid $primary-color;
  font-size: 1.2em;
  text-align: center;
  width: 2em;
@@ -124,8 +154,9 @@ body {
 
 #stop-button {
   align-self: center;
-  background-color: lighten(#EB3B3F, 20%);
-  border: none;
+  background-color: lighten( $primary-color, 20% );
+  border: .12em solid;
+  border-color: $primary-color darken( $primary-color, 20% );
   cursor: pointer;
   display: block;
   font-family: $primary-font-family;
@@ -137,8 +168,9 @@ body {
 
 #pause-button {
   align-self: center;
-  background-color: lighten(#11B997, 20%);
-  border: none;
+  background-color: lighten( $secondary-color, 20% );
+  border: .12em solid;
+  border-color: $secondary-color darken( $secondary-color, 20% );
   cursor: pointer;
   display: block;
   font-family: $primary-font-family;
