@@ -7,9 +7,17 @@
     font-size: 4em;
   }
 
+  #task-time-remaining {
+    font-size: 2em;
+  }
+
+  #break-time-remaining {
+    font-size: 2em;
+  }
+
   #timer {
     font-size: 7em;
-    padding: 10vh 0 10vh 0;
+    padding: 9vh 0 10vh 0;
   }
 
   #start-button{
@@ -40,8 +48,8 @@
   }
 
   #timer {
-    font-size: 10em;
-    padding: 10vh 0 10vh 0;
+    font-size: 8em;
+    padding: 8vh 0 10vh 0;
   }
 
   .time-inputs-text {
