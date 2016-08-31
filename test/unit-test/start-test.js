@@ -1,21 +1,30 @@
-require('../../lib/scripts/index');
+const Timer = require('../../lib/scripts/timer');
+const render = require('../../lib/scripts/render');
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 const $ = require('jquery');
 
 describe('start', function(){
-  beforeEach(function(){
-    const timer = new Timer(25, 0, 25);
+ context('start button', function(){
+   beforeEach( function(){
+     this.rightNow = Date.now();
+     this.dateNow = Date.now;
+     Date.now = () => this.rightNow;
+   });
 
-  });
-  afterEach(function() {
-
-  });
-
-  it('should change css atributes', function() {
-    
-  })
-  it('should decrement the time', function(){
-    tick();
-    assert.lessThan(timer.remainingTime, 25);
-  });
+   afterEach( function() {
+     Date.now = this.dateNow;
+     let timer;
+   });
+   it('should have a default period', function() {
+    let timer = new Timer(15);
+     assert.equal(timer.period, 15 * 60000);
+   });
+   it('should change status when time is completed', function() {
+     let taskStatus = 1;
+     let timer = new Timer(0);
+     taskStatus++;
+     assert.equal(taskStatus, 2);
+   });
+ });
 });
