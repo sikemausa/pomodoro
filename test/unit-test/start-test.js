@@ -3,6 +3,7 @@ const Timer = require('../../lib/scripts/timer');
 const render = require('../../lib/scripts/render');
 const assert = require('chai').assert;
 const expect = require('chai').expect;
+const tick = require('');
 const $ = require('jquery');
 
 describe('start', function(){
@@ -15,20 +16,21 @@ describe('start', function(){
 
    afterEach( function() {
      Date.now = this.dateNow;
-     timer;
+     let timer;
    });
    it('should run a timer when clicked', function() {
-     timer = new Timer(15);
+    let timer = new Timer(15);
      tick(timer);
      assert.equal(timer.period, 15 * 60000);
    });
    it('should decrease the time after clicked', function() {
-     timer = new Timer(15);
+     let timer = new Timer(15);
      tick(timer);
      asser.isBelow(timer.remainingTime, timer.period);
    });
    it('should change status when time is completed', function() {
-     timer = new Timer(0)
+     let timer = new Timer(0);
+     let taskStatus = 1;
      tick(timer);
      assert.equal(taskStatus, 2);
    });
