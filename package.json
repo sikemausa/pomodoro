@@ -12,8 +12,10 @@
   "author": "Adam Bernard and Mike Sausa",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.5.2",
     "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "jquery": "^3.1.0",
