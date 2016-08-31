@@ -23,7 +23,4 @@ describe('timer', function(){
   it('has a preset task status', function(){
     assert.equal(timer.taskStatus, 1);
   });
-  it('has a preset current state', function(){
-    assert.equal(timer.currentState, "unstarted");
-  });
 });
